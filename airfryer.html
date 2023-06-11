@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Receitas de airfryer</title>
+</head>
+
+<body>
+    <div class="cabeçalho">
+        <a href="home.html">
+            <img class="logo" src="imagens/logo-v4.webp" alt="Logo da página">
+        </a>
+        <form>
+            <i class="bi bi-person"></i>
+            <input class="busca-receita" type="text" placeholder="Encontre sua receita">
+            <button class="botao" type="submit">
+                <span class="icone">&#128269;</span>
+            </button>
+        </form>
+    </div>
+
+    <h1>Receitas para airfryer</h1>
+
+    <div class="tabs-container">
+        <div class="tab active" onclick="changeTab(event, 'tab1')">Carnes</div>
+        <div class="tab" onclick="changeTab(event, 'tab2')">Pães</div>
+        <div class="tab" onclick="changeTab(event, 'tab3')">Doces e sobremesas</div>
+    </div>
+
+    <div id="tab1" class="tab-content active">
+        <h2>Receitas de carnes</h2>
+        <div class="recipe-container">
+            <div class="recipe">
+                <a href="picanha.html">
+                    <img src="imagens/principais receitas/airfryer/picanha/picanha-logo.webp" alt="Imagem da Receita 1">
+                    <div class="recipe-description">
+                        <h3>Picanha na airfryer</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="recipe">
+                <a href="salmão.html">
+                    <img src="imagens/principais receitas/airfryer/salmão/salmao-logo.webp" alt="Imagem da Receita 2">
+                    <div class="recipe-description">
+                        <h3>Salmão com batata na airfryer</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab2" class="tab-content">
+        <h2>Receitas de Pães</h2>
+        <div class="recipe-container">
+            <div class="recipe">
+                <a href="pao-forma.html">
+                    <img src="imagens/principais receitas/airfryer/pão-de-forma/pao-forma-logo.webp"
+                        alt="Imagem da Receita 1">
+                    <div class="recipe-description">
+                        <h3>Pão de forma na airfryer</h3>
+                    </div>
+                </a>
+            </div>
+            <div class="recipe">
+                <a href="pao-aveia.html">
+                    <img src="imagens/principais receitas/airfryer/pão-de-aveia/pao-aveia-logo.webp"
+                        alt="Imagem da Receita 2">
+                    <div class="recipe-description">
+                        <h3>Pão de aveia na airfryer</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab3" class="tab-content">
+        <h2>Receitas de Doces e sobremesas</h2>
+        <div class="recipe-container">
+            <div class="recipe">
+                <a href="bolo-banana.html">
+                    <img src="imagens/principais receitas/airfryer/bolo-banana/bolo-banana-logo.webp"
+                        alt="Imagem da Receita 3">
+                    <div class="recipe-description">
+                        <h3>Bolo de banana na airfryer</h3>
+                </a>
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="imagens/principais receitas/airfryer/bolo-chuva/" alt="Imagem da Receita 4">
+            <div class="recipe-description">
+                <h3>Nome da Receita 4</h3>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function changeTab(evt, tabId) {
+            var i, tabContent, tabLinks;
+
+            // Esconder todas as abas
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+
+            // Remover classe 'active' de todos os links
+            tabLinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].classList.remove("active");
+            }
+
+            // Mostrar aba selecionada e adicionar classe 'active' ao link correspondente
+            document.getElementById(tabId).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+
+</html>

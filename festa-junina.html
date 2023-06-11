@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Festa Junina</title>
+</head>
+
+<body>
+    <div class="cabeçalho" style="
+    border-bottom-width: 50px;
+">
+        <img class="logo" src="imagens/logo-v4.webp" alt="Logo da página">
+        <form>
+            <i class="bi bi-person"></i>
+            <input class="busca-receita" type="text" placeholder="Encontre sua receita">
+            <button class="botao" type="submit">
+                <span class="icone">&#128269;</span>
+            </button>
+        </form>
+
+    </div>
+
+
+    <h1>Receitas de Festa Junina</h1>
+
+    <div class="tabs-container">
+        <div class="tab active" onclick="changeTab(event, 'tab1')">Salgadas</div>
+        <div class="tab" onclick="changeTab(event, 'tab2')">Doces</div>
+        <div class="tab" onclick="changeTab(event, 'tab3')">Bebidas</div>
+    </div>
+
+    <div id="tab1" class="tab-content active">
+        <h2>Receitas de Salgadas</h2>
+        <div class="recipe-container">
+            <div class="recipe">
+                <a href="cachorro-quente.html">
+                    <img src="imagens/principais receitas/festa-junina/cachorro-quente-logo.webp"
+                        alt="Imagem da Receita 1">
+                    <div class="recipe-description">
+                </a>
+                <h3>Cachorro quente</h3>
+
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="imagens/principais receitas/festa-junina/pastel.webp" alt="Imagem da Receita 2">
+            <div class="recipe-description">
+                <h3>Pastel de feira</h3>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="recipe-container">
+        <div class="recipe">
+            <img src="imagens/principais receitas/festa-junina/torta.webp" alt="Imagem da Receita 1">
+            <div class="recipe-description">
+                <h3>Torta de liquidificador caipira</h3>
+
+            </div>
+        </div>
+        <div class="recipe">
+            <img src="imagens/principais receitas/festa-junina/milho.webp" alt="Imagem da Receita 2">
+            <div class="recipe-description">
+                <h3>Milho cozido</h3>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="tab2" class="tab-content">
+        <h2>Receitas de Doces</h2>
+        <div class="recipe-container">
+            <div class="recipe">
+                <img src="caminho-da-imagem-3.jpg" alt="Imagem da Receita 3">
+                <div class="recipe-description">
+                    <h3>Nome da Receita 3</h3>
+                    <p>Descrição da Receita 3</p>
+                </div>
+            </div>
+            <div class="recipe">
+                <img src="caminho-da-imagem-4.jpg" alt="Imagem da Receita 4">
+                <div class="recipe-description">
+                    <h3>Nome da Receita 4</h3>
+                    <p>Descrição da Receita 4</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab3" class="tab-content">
+        <h2>Receitas de Bebidas</h2>
+        <div class="recipe-container">
+            <div class="recipe">
+                <img src="caminho-da-imagem-5.jpg" alt="Imagem da Receita 5">
+                <div class="recipe-description">
+                    <h3>Nome da Receita 5</h3>
+                    <p>Descrição da Receita 5</p>
+                </div>
+            </div>
+            <div class="recipe">
+                <img src="caminho-da-imagem-6.jpg" alt="Imagem da Receita 6">
+                <div class="recipe-description">
+                    <h3>Nome da Receita 6</h3>
+                    <p>Descrição da Receita 6</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeTab(evt, tabId) {
+            var i, tabContent, tabLinks;
+
+            // Esconder todas as abas
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+
+            // Remover classe 'active' de todos os links
+            tabLinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].classList.remove("active");
+            }
+
+            // Mostrar aba selecionada e adicionar classe 'active' ao link correspondente
+            document.getElementById(tabId).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+
+</html>
